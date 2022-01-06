@@ -1,7 +1,10 @@
 # QLDT
-#Create Full Option Admin :
+#**Create Full Option Admin **:
 
-1: Login/Logout\n
-2: Forgot password\n
-3: Create & Change Information of Admin\n
-4: Have avatar\n
+1: Login/Logout
+
+2: Forgot password
+
+3: Create & Change Information of Admin
+
+4: Have avatar
