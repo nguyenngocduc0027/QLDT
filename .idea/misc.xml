@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/avatar_border.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/blue_border_rounded_cornwe.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/blue_fill__rounded_color.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/cursor_color.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/giangvien.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/drawable/sinhvien.xml" value="0.37864583333333335" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_edit_profile.xml" value="0.34074074074074073" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_forgot_password.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_home.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_login.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_profile.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_handle_screen.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_splash_screen.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

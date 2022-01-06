@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1025823670856",
+    "project_id": "qldt-20170027",
+    "storage_bucket": "qldt-20170027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025823670856:android:28334d58fde228ff998e7d",
+        "android_client_info": {
+          "package_name": "com.example.qldt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025823670856-sjabgqoig25ukno8vjqt0vlkrdhdo29f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQqqhXuDWH6_R0w9r3-95reM708BBBCXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025823670856-sjabgqoig25ukno8vjqt0vlkrdhdo29f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
