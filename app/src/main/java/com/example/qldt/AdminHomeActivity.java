@@ -70,6 +70,15 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_sinhvien = findViewById(R.id.btn_sinhvien);
+        btn_sinhvien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminHomeActivity.this,AdminQLSinhVienActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btn_profile = findViewById(R.id.btn_profile);
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
