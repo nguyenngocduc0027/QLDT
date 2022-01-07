@@ -64,6 +64,8 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
 
     String mssc_check = "";
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +76,9 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("SinhVien");
         storageReference = FirebaseStorage.getInstance().getReference().child("SinhVien");
+
+
+
 
         imageView = findViewById(R.id.admin_add_imgsv_show);
         Button admin_add_sv_btn = findViewById(R.id.admin_add_btnaddsv);
@@ -86,7 +91,6 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
         admin_add_dobsv = findViewById(R.id.admin_add_dobsv);
         admin_add_phonesv = findViewById(R.id.admin_add_phonesv);
         admin_add_addresssv = findViewById(R.id.admin_add_addresssv);
-
 
 
         admin_add_dobsv.setInputType(InputType.TYPE_NULL);
@@ -139,7 +143,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
 
     private void uploadProfileImage() {
         if (imageUri != null){
-            final  StorageReference fileRef = storageReference.child("20170027.jpg");
+            final  StorageReference fileRef = storageReference.child(admin_add_idsv.getText().toString()+".jpg");
             uploadTask = fileRef.putFile(imageUri);
             uploadTask.continueWithTask(new Continuation() {
                 @Override

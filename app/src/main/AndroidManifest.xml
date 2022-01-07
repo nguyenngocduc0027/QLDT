@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QLDT">
         <activity
+            android:name=".AdminQLSinhVienEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminQLSinhVienAddActivity"
             android:exported="false" />
         <activity

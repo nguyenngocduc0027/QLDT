@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".AdminQLSinhVienAddActivity">
-
+    tools:context=".AdminQLSinhVienEditActivity">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -20,7 +19,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/admin_add_sv_back"
+                android:id="@+id/admin_edit_sv_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -32,13 +31,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="THÊM SINH VIÊN"
+                android:text="SỬA THÔNG TIN"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.341"
-                app:layout_constraintStart_toEndOf="@+id/admin_add_sv_back"
+                app:layout_constraintStart_toEndOf="@+id/admin_edit_sv_back"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.551"
                 tools:ignore="HardcodedText" />
@@ -56,7 +55,7 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/admin_add_imgsv_show"
+                android:id="@+id/admin_edit_imgsv_show"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="20dp"
@@ -67,7 +66,7 @@
                 app:civ_border_color="#ff5722"/>
 
             <TextView
-                android:id="@+id/admin_add_imgsv"
+                android:id="@+id/admin_edit_imgsv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thêm Ảnh"
@@ -86,14 +85,20 @@
                 android:background="@drawable/blue_border_rounded_cornwe">
 
                 <!-- INPUT -->
+
+                <!-- ICON -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_idsv"
+                    android:id="@+id/admin_edit_idsv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
                     android:layout_toEndOf="@+id/username_icon_0"
                     android:background="@android:color/transparent"
+                    android:enabled="false"
                     android:fontFamily="@font/poppins_regular"
                     android:hint="Mã Số Sinh Viên"
+                    android:textColorHint="@color/black"
+                    android:textStyle="bold"
                     android:inputType="number"
                     android:maxLines="1"
                     android:paddingStart="17dp"
@@ -104,7 +109,6 @@
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
-                <!-- ICON -->
                 <ImageView
                     android:id="@+id/username_icon_0"
                     android:layout_width="24dp"
@@ -126,7 +130,7 @@
 
                 <!-- INPUT -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_namesv"
+                    android:id="@+id/admin_edit_namesv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/username_icon_1"
@@ -156,7 +160,7 @@
             </RelativeLayout>
 
             <RadioGroup
-                android:id="@+id/admin_add_gtsv"
+                android:id="@+id/admin_edit_gtsv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -171,7 +175,7 @@
                     android:layout_marginStart="17dp"
                     android:src="@drawable/gender"/>
                 <RadioButton
-                    android:id="@+id/admin_add_gtsv_nam"
+                    android:id="@+id/admin_edit_gtsv_nam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -180,7 +184,7 @@
                     android:text="Nam"
                     tools:ignore="HardcodedText" />
                 <RadioButton
-                    android:id="@+id/admin_add_gtsv_nu"
+                    android:id="@+id/admin_edit_gtsv_nu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -200,7 +204,7 @@
 
                 <!-- INPUT -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_emailsv"
+                    android:id="@+id/admin_edit_emailsv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/username_icon_2"
@@ -240,7 +244,7 @@
 
                 <!-- INPUT -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_dobsv"
+                    android:id="@+id/admin_edit_dobsv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/username_icon_3"
@@ -279,7 +283,7 @@
 
                 <!-- INPUT -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_phonesv"
+                    android:id="@+id/admin_edit_phonesv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/username_icon_4"
@@ -317,7 +321,7 @@
 
                 <!-- INPUT -->
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_addresssv"
+                    android:id="@+id/admin_edit_addresssv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/username_icon_5"
@@ -346,8 +350,47 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/blue_border_rounded_cornwe">
+
+                <!-- INPUT -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_edit_passwordsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/username_icon_6"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Mật khẩu"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/username_icon_6"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/password" />
+
+            </RelativeLayout>
+
             <Button
-                android:id="@+id/admin_add_btnaddsv"
+                android:id="@+id/admin_edit_btneditsv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

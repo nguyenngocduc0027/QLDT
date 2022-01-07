@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/blue_border_rounded_cornwe"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/item_list_sv_mssv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã Số Sinh Viên "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ tên sinh viên ở đây"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:layout_marginBottom="5dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_gt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Giới tính"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Ngày sinh sinh viên ở đây"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email sinh viên"
+            android:layout_marginBottom="5dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Số Điện thoại"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/item_list_sv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Địa chỉ"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/btn_popup_menu_QLSV_item"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|right"
+        android:src="@drawable/ic_baseline_menu_24"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_list_sv_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/avatar"
+        android:background="@drawable/avatar"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#ff5722"/>
+
+</FrameLayout>

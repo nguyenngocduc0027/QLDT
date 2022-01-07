@@ -1,8 +1,10 @@
 package com.example.qldt.model;
 
-public class SinhVien {
+import java.io.Serializable;
 
-    String image, mssv, name, gt, email, dob, phone, address, password;
+public class SinhVien implements Serializable {
+
+    private String image, mssv, name, gt, email, dob, phone, address, password;
 
     @Override
     public String toString() {
