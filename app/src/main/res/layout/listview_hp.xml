@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/blue_border_rounded_cornwe"
+    android:padding="15dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/id"/>
+            <TextView
+                android:id="@+id/item_list_hp_mahp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mã học phần "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/id"/>
+            <TextView
+                android:id="@+id/item_list_hp_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên học phần "
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/id"/>
+            <TextView
+                android:id="@+id/item_list_hp_sotc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số tín chỉ "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_list_hp_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_popup_menu_QLHP_item"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="top|right"
+        android:src="@drawable/ic_baseline_menu_24"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+</FrameLayout>

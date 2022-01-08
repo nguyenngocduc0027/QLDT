@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".AdminQLHocPhanEditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/admin_edit_hp_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HỌC PHẦN"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.341"
+                app:layout_constraintStart_toEndOf="@+id/admin_edit_hp_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.551"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/hocphanimg"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/blue_border_rounded_cornwe">
+
+                <!-- INPUT -->
+
+                <!-- ICON -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_edit_hp_mahp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/username_icon_01"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Mã học phần"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="#000000"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/username_icon_01"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/id" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/blue_border_rounded_cornwe">
+
+                <!-- INPUT -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_edit_hp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/username_icon_1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Tên học phần"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/username_icon_1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/id" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/blue_border_rounded_cornwe">
+
+                <!-- INPUT -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_edit_hp_sotc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/username_icon_4"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Số tín chỉ"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/username_icon_4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/id" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/blue_border_rounded_cornwe">
+
+                <!-- INPUT -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/admin_edit_hp_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/username_icon_5"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Thông tin"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/username_icon_5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/id" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/admin_edit_btnedithp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="THÊM"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

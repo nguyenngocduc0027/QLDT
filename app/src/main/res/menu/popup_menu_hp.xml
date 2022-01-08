@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
 
+        android:id="@+id/popup_menu_edit_hp"
+        android:title="Sửa"
+        tools:ignore="HardcodedText">
+    </item>
+    <item
+        android:id="@+id/popup_menu_delete_hp"
+        android:title="Xóa"
+        tools:ignore="HardcodedText" />
 </menu>
