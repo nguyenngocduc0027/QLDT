@@ -10,8 +10,8 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.qldt.adapter.SinhVienAdapter;
-import com.example.qldt.model.SinhVien;
+import com.example.qldt.adapter.GiangVienAdapter;
+import com.example.qldt.model.GiangVien;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,49 +20,45 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class AdminQLSinhVienActivity extends AppCompatActivity {
+public class AdminQLGiangVienActivity extends AppCompatActivity {
 
-    ListView list_sv;
-    ArrayList<SinhVien> sinhVienArrayList;
-    private SinhVienAdapter adapter;
+    ListView list_gv;
+    ArrayList<GiangVien> giangVienArrayList;
+    private GiangVienAdapter adapter;
 
-    ImageButton QLSV_add_sv,QLSV_back_button;
+    ImageButton QLGV_add_gv,QLGV_back_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_qlsinh_vien);
+        setContentView(R.layout.activity_admin_qlgiang_vien);
 
-        QLSV_add_sv = findViewById(R.id.QLSV_add_sv);
-        QLSV_back_button = findViewById(R.id.QLSV_back_button);
+        QLGV_add_gv = findViewById(R.id.QLGV_add_gv);
+        QLGV_back_button = findViewById(R.id.QLGV_back_button);
 
-        list_sv = findViewById(R.id.list_sv);
+        list_gv = findViewById(R.id.list_gv);
+
         // tạo danh sách sinh viên
-//        sinhVienArrayList.add(new SinhVien("","Mã số sinh viên","Họ tên","Nam/Nữ","Email sinh viên","dd/mm/yyyy","039xxxx","wwwwww",""));
-//        sinhVienArrayList.add(new SinhVien("","Mã số sinh viên","Họ tên","Nam/Nữ","Email sinh viên","dd/mm/yyyy","039xxxx","wwwwww",""));
-//        sinhVienArrayList.add(new SinhVien("","Mã số sinh viên","Họ tên","Nam/Nữ","Email sinh viên","dd/mm/yyyy","039xxxx","wwwwww",""));
-            sinhVienArrayList = new ArrayList<>();
-            GetData();
+        giangVienArrayList = new ArrayList<>();
+//        giangVienArrayList.add(new GiangVien("","giangvien@gmail.com","Giang văn Viên","Nam","11/11/2021","03922223452","Ha Noi",""));
+        GetData();
+
         // gọi custom adapter để gán cho listview
         //this là layout này, custom_listview_item là layout của từng sinh viên
         // sinhvien_array_list là list data sinh viên được trả về từ firebase
-        adapter = new SinhVienAdapter(AdminQLSinhVienActivity.this,R.layout.listview_sv,sinhVienArrayList);
+        adapter = new GiangVienAdapter(AdminQLGiangVienActivity.this,R.layout.listview_gv,giangVienArrayList);
         // tạo adapter cho listview
-        list_sv.setAdapter(adapter);
+        list_gv.setAdapter(adapter);
 
-
-
-
-
-        QLSV_add_sv.setOnClickListener(new View.OnClickListener() {
+        QLGV_add_gv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AdminQLSinhVienAddActivity.class);
+                Intent intent = new Intent(getApplicationContext(),AdminQLGiangVienAddActivity.class);
                 startActivity(intent);
             }
         });
 
-        QLSV_back_button.setOnClickListener(new View.OnClickListener() {
+        QLGV_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent2 = new Intent(getApplicationContext(),AdminHomeActivity.class);
@@ -70,11 +66,11 @@ public class AdminQLSinhVienActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
 
+    }
     private void GetData() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = database.getReference().child("SinhVien");
+        DatabaseReference databaseReference = database.getReference().child("GiangVien");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -83,11 +79,11 @@ public class AdminQLSinhVienActivity extends AppCompatActivity {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     // chuyển đổi dữ liệu qua class SinhVien
-                    SinhVien sinhVien = dataSnapshot.getValue(SinhVien.class);
+                    GiangVien giangVien = dataSnapshot.getValue(GiangVien.class);
                     // thêm sinh viên vào list_sv
-                    assert sinhVien != null;
-                    sinhVien.setMssv(dataSnapshot.getKey());
-                    adapter.add(sinhVien);
+                    assert giangVien != null;
+                    giangVien.setMsnv(dataSnapshot.getKey());
+                    adapter.add(giangVien);
                 }
             }
 

@@ -70,6 +70,24 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_hocphan = findViewById(R.id.btn_hocphan);
+        btn_hocphan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent hp = new Intent(AdminHomeActivity.this, AdminQLHocPhanActivity.class);
+                startActivity(hp);
+            }
+        });
+
+        Button btn_giangvien = findViewById(R.id.btn_giangvien);
+        btn_giangvien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gv = new Intent(AdminHomeActivity.this,AdminQLGiangVienActivity.class);
+                startActivity(gv);
+            }
+        });
+
         Button btn_sinhvien = findViewById(R.id.btn_sinhvien);
         btn_sinhvien.setOnClickListener(new View.OnClickListener() {
             @Override

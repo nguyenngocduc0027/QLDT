@@ -16,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QLDT">
         <activity
+            android:name=".AdminQLHocPhanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminQLGiangVienEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminQLGiangVienAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminQLGiangVienActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminQLSinhVienEditActivity"
             android:exported="false" />
         <activity

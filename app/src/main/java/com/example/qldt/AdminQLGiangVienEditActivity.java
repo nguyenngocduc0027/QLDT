@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.qldt.model.GiangVien;
 import com.example.qldt.model.SinhVien;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,7 +39,7 @@ import java.util.Calendar;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class AdminQLSinhVienEditActivity extends AppCompatActivity {
+public class AdminQLGiangVienEditActivity extends AppCompatActivity {
 
     FirebaseStorage storage ;
     FirebaseDatabase firebaseDatabase ;
@@ -50,45 +52,44 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
 
     Uri imageUri;
     String myUri = "";
-    RadioGroup admin_edit_gtsv;
+    RadioGroup admin_edit_gtgv;
     DatePickerDialog editpicker;
-    TextInputEditText admin_edit_idsv ,admin_edit_namesv, admin_edit_emailsv, admin_edit_dobsv, admin_edit_phonesv, admin_edit_addresssv, admin_edit_passwordsv ;
-    RadioButton admin_edit_gtsv_btn,admin_edit_gtsv_nam,admin_edit_gtsv_nu;
+    TextInputEditText admin_edit_msnvgv ,admin_edit_namegv, admin_edit_emailgv, admin_edit_dobgv, admin_edit_phonegv, admin_edit_addressgv, admin_edit_passwordgv ;
+    RadioButton admin_edit_gtgv_btn,admin_edit_gtgv_nam,admin_edit_gtgv_nu;
     int selectedId;
 
-    SinhVien sinhVien;
-
+    GiangVien giangVien;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_qlsinh_vien_edit);
+        setContentView(R.layout.activity_admin_qlgiang_vien_edit);
 
         storage = FirebaseStorage.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("SinhVien");
-        storageReference = FirebaseStorage.getInstance().getReference().child("SinhVien");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("GiangVien");
+        storageReference = FirebaseStorage.getInstance().getReference().child("GiangVien");
 
 
 
 
-        imageView = findViewById(R.id.admin_edit_imgsv_show);
-        Button admin_edit_sv_btn = findViewById(R.id.admin_edit_btneditsv);
-        TextView choose_imgsv = findViewById(R.id.admin_edit_imgsv);
-        ImageView back = findViewById(R.id.admin_edit_sv_back);
-        admin_edit_idsv = findViewById(R.id.admin_edit_idsv);
-        admin_edit_gtsv = findViewById(R.id.admin_edit_gtsv);
-        admin_edit_namesv = findViewById(R.id.admin_edit_namesv);
-        admin_edit_emailsv = findViewById(R.id.admin_edit_emailsv);
-        admin_edit_dobsv = findViewById(R.id.admin_edit_dobsv);
-        admin_edit_phonesv = findViewById(R.id.admin_edit_phonesv);
-        admin_edit_addresssv = findViewById(R.id.admin_edit_addresssv);
-        admin_edit_passwordsv = findViewById(R.id.admin_edit_passwordsv);
+        imageView = findViewById(R.id.admin_edit_imggv_show);
+        Button admin_edit_gv_btn = findViewById(R.id.admin_edit_btneditgv);
+        TextView choose_imggv = findViewById(R.id.admin_edit_imggv);
+        ImageView back = findViewById(R.id.admin_edit_gv_back);
+        admin_edit_msnvgv = findViewById(R.id.admin_edit_msnvgv);
+        admin_edit_gtgv = findViewById(R.id.admin_edit_gtgv);
+        admin_edit_namegv = findViewById(R.id.admin_edit_namegv);
+//        admin_edit_emailgv = findViewById(R.id.admin_edit_emailgv);
+        admin_edit_dobgv = findViewById(R.id.admin_edit_dobgv);
+        admin_edit_phonegv = findViewById(R.id.admin_edit_phonegv);
+        admin_edit_addressgv = findViewById(R.id.admin_edit_addressgv);
+        admin_edit_passwordgv = findViewById(R.id.admin_edit_passwordgv);
 
 
-        admin_edit_dobsv.setInputType(InputType.TYPE_NULL);
-        admin_edit_dobsv.setOnClickListener(new View.OnClickListener() {
+        admin_edit_dobgv.setInputType(InputType.TYPE_NULL);
+        admin_edit_dobgv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Calendar cldr = Calendar.getInstance();
@@ -96,12 +97,12 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
                 // date picker dialog
-                editpicker = new DatePickerDialog(AdminQLSinhVienEditActivity.this,
+                editpicker = new DatePickerDialog(AdminQLGiangVienEditActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @SuppressLint("SetTextI18n")
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                                admin_edit_dobsv.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                admin_edit_dobgv.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
                             }
                         }, year, month, day);
                 editpicker.show();
@@ -111,17 +112,17 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
         // lấy gói data từ màn hình hiển thị sinh viên
         Intent getdata = getIntent();
         // truyền vào khóa của gói để nhận dữ liệu đúng
-        sinhVien = (SinhVien) getdata.getSerializableExtra("SINHVIEN");
-        if (sinhVien != null) {
+        giangVien = (GiangVien) getdata.getSerializableExtra("GIANGVIEN");
+        if (giangVien != null) {
             // đưa thông tin từ gói nhận đc hiển thị lên hinttext của edit text
-            Glide.with(getApplicationContext()).load(sinhVien.getImage()).override(120,120).fitCenter().into(imageView);
-            admin_edit_idsv.setText(sinhVien.getMssv());
-            admin_edit_namesv.setText(sinhVien.getName());
-            admin_edit_emailsv.setText(sinhVien.getEmail());
-            admin_edit_dobsv.setText(sinhVien.getDob());
-            admin_edit_phonesv.setText(sinhVien.getPhone());
-            admin_edit_addresssv.setText(sinhVien.getAddress());
-            admin_edit_passwordsv.setText(sinhVien.getPassword());
+            Glide.with(getApplicationContext()).load(giangVien.getImage()).override(120,120).fitCenter().into(imageView);
+            admin_edit_msnvgv.setText(giangVien.getMsnv());
+            admin_edit_namegv.setText(giangVien.getName());
+//            admin_edit_emailgv.setText(giangVien.getEmail());
+            admin_edit_dobgv.setText(giangVien.getDob());
+            admin_edit_phonegv.setText(giangVien.getPhone());
+            admin_edit_addressgv.setText(giangVien.getAddress());
+            admin_edit_passwordgv.setText(giangVien.getPassword());
         } else {
             Toast.makeText(getApplicationContext(),"Error Load Data Sinh Vien", Toast.LENGTH_LONG).show();
         }
@@ -133,14 +134,14 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
             }
         });
 
-        choose_imgsv.setOnClickListener(new View.OnClickListener() {
+        choose_imggv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CropImage.activity().setAspectRatio(1,1).start(AdminQLSinhVienEditActivity.this);
+                CropImage.activity().setAspectRatio(1,1).start(AdminQLGiangVienEditActivity.this);
             }
         });
 
-        admin_edit_sv_btn.setOnClickListener(new View.OnClickListener() {
+        admin_edit_gv_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 uploadProfileImage();
@@ -150,7 +151,7 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
 
     private void uploadProfileImage() {
         if (imageUri != null){
-            final  StorageReference fileRef = storageReference.child(admin_edit_idsv.getText().toString()+".jpg");
+            final  StorageReference fileRef = storageReference.child(admin_edit_msnvgv.getText().toString()+".jpg");
             uploadTask = fileRef.putFile(imageUri);
             uploadTask.continueWithTask(new Continuation() {
                 @Override
@@ -169,20 +170,20 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
 
 //                        HashMap<String, Object> userMap = new HashMap<>();
 //                        userMap.put("image",myUri);
-                        if (admin_edit_gtsv.getCheckedRadioButtonId() != -1) {
-                            selectedId = admin_edit_gtsv.getCheckedRadioButtonId();
-                            admin_edit_gtsv_btn = findViewById(selectedId);
+                        if (admin_edit_gtgv.getCheckedRadioButtonId() != -1) {
+                            selectedId = admin_edit_gtgv.getCheckedRadioButtonId();
+                            admin_edit_gtgv_btn = findViewById(selectedId);
                             String image = downloadUrl.toString();
-                            String gt = admin_edit_gtsv_btn.getText().toString();
-                            String mssv = admin_edit_idsv.getText().toString();
-                            String name = admin_edit_namesv.getText().toString();
-                            String email = admin_edit_emailsv.getText().toString();
-                            String dob = admin_edit_dobsv.getText().toString();
-                            String phone = admin_edit_phonesv.getText().toString();
-                            String address = admin_edit_addresssv.getText().toString();
-                            String password = admin_edit_passwordsv.getText().toString();
-                            sinhVien = new SinhVien(image, mssv,name, gt, email, dob, phone, address, password);
-                            databaseReference.child(sinhVien.getMssv()).setValue(sinhVien);
+                            String gt = admin_edit_gtgv_btn.getText().toString();
+                            String msnv = admin_edit_msnvgv.getText().toString();
+                            String name = admin_edit_namegv.getText().toString();
+                            String email = admin_edit_msnvgv.getText().toString()+"@gmail.com";
+                            String dob = admin_edit_dobgv.getText().toString();
+                            String phone = admin_edit_phonegv.getText().toString();
+                            String address = admin_edit_addressgv.getText().toString();
+                            String password = admin_edit_passwordgv.getText().toString();
+                            giangVien = new GiangVien(image,msnv,email,name,gt,dob,phone,address,password);
+                            databaseReference.child(giangVien.getMsnv()).setValue(giangVien);
                             backfunc();
                         } else {
                             Toast.makeText(getApplicationContext(), "Vui lòng chọn giới tính", Toast.LENGTH_LONG).show();
@@ -193,20 +194,20 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
 
         }
         else {
-            if (admin_edit_gtsv.getCheckedRadioButtonId() != -1) {
-                selectedId = admin_edit_gtsv.getCheckedRadioButtonId();
-                admin_edit_gtsv_btn = findViewById(selectedId);
-                String image = sinhVien.getImage();
-                String gt = admin_edit_gtsv_btn.getText().toString();
-                String mssv = admin_edit_idsv.getText().toString();
-                String name = admin_edit_namesv.getText().toString();
-                String email = admin_edit_emailsv.getText().toString();
-                String dob = admin_edit_dobsv.getText().toString();
-                String phone = admin_edit_phonesv.getText().toString();
-                String address = admin_edit_addresssv.getText().toString();
-                String password = admin_edit_passwordsv.getText().toString();
-                sinhVien = new SinhVien(image, mssv,name, gt, email, dob, phone, address, password);
-                databaseReference.child(sinhVien.getMssv()).setValue(sinhVien);
+            if (admin_edit_gtgv.getCheckedRadioButtonId() != -1) {
+                selectedId = admin_edit_gtgv.getCheckedRadioButtonId();
+                admin_edit_gtgv_btn = findViewById(selectedId);
+                String image = giangVien.getImage();
+                String gt = admin_edit_gtgv_btn.getText().toString();
+                String msnv = admin_edit_msnvgv.getText().toString();
+                String name = admin_edit_namegv.getText().toString();
+                String email = admin_edit_msnvgv.getText().toString()+"@gmail.com";
+                String dob = admin_edit_dobgv.getText().toString();
+                String phone = admin_edit_phonegv.getText().toString();
+                String address = admin_edit_addressgv.getText().toString();
+                String password = admin_edit_passwordgv.getText().toString();
+                giangVien = new GiangVien(image,msnv,email,name,gt,dob,phone,address,password);
+                databaseReference.child(giangVien.getMsnv()).setValue(giangVien);
                 backfunc();
             } else {
                 Toast.makeText(getApplicationContext(), "Vui lòng chọn giới tính", Toast.LENGTH_LONG).show();
@@ -216,7 +217,7 @@ public class AdminQLSinhVienEditActivity extends AppCompatActivity {
     }
 
     private void backfunc() {
-        Intent intent = new Intent(getApplicationContext(),AdminQLSinhVienActivity.class);
+        Intent intent = new Intent(getApplicationContext(),AdminQLGiangVienActivity.class);
         Toast.makeText(getApplicationContext(),"Không Thành Công cũng Thành Thụ",Toast.LENGTH_LONG).show();
         startActivity(intent);
         finish();

@@ -58,12 +58,10 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
     String myUri = "";
     RadioGroup admin_add_gtsv;
     DatePickerDialog editpicker;
-    TextInputEditText admin_add_idsv ,admin_add_namesv, admin_add_emailsv, admin_add_dobsv, admin_add_phonesv, admin_add_addresssv ;
+    TextInputEditText admin_add_idsv ,admin_add_namesv, admin_add_dobsv, admin_add_phonesv, admin_add_addresssv ;
     RadioButton admin_add_gtsv_btn,admin_add_gtsv_nam,admin_add_gtsv_nu;
     int selectedId;
 
-    String mssc_check = "";
-    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
     @Override
@@ -87,7 +85,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
         admin_add_idsv = findViewById(R.id.admin_add_idsv);
         admin_add_gtsv = findViewById(R.id.admin_add_gtsv);
         admin_add_namesv = findViewById(R.id.admin_add_namesv);
-        admin_add_emailsv = findViewById(R.id.admin_add_emailsv);
+//        admin_add_emailsv = findViewById(R.id.admin_add_emailsv);
         admin_add_dobsv = findViewById(R.id.admin_add_dobsv);
         admin_add_phonesv = findViewById(R.id.admin_add_phonesv);
         admin_add_addresssv = findViewById(R.id.admin_add_addresssv);
@@ -165,7 +163,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
                         if (!admin_add_idsv.getEditableText().toString().isEmpty()){
                             if (!admin_add_namesv.getEditableText().toString().isEmpty()) {
                                 if (admin_add_gtsv.getCheckedRadioButtonId() != -1) {
-                                    if (!admin_add_emailsv.getEditableText().toString().isEmpty() && admin_add_emailsv.getEditableText().toString().trim().matches(emailPattern)){
+//                                    if (!admin_add_emailsv.getEditableText().toString().isEmpty() && admin_add_emailsv.getEditableText().toString().trim().matches(emailPattern)){
                                         if (!admin_add_dobsv.getEditableText().toString().isEmpty()){
                                             if (!admin_add_phonesv.getEditableText().toString().isEmpty()){
                                                 if (!admin_add_addresssv.getEditableText().toString().isEmpty()){
@@ -175,7 +173,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
                                                     String gt = admin_add_gtsv_btn.getText().toString();
                                                     String mssv = admin_add_idsv.getText().toString();
                                                     String name = admin_add_namesv.getText().toString();
-                                                    String email = admin_add_emailsv.getText().toString();
+                                                    String email ="mssv"+admin_add_idsv.getText().toString()+"@gmail.com";
                                                     String dob = admin_add_dobsv.getText().toString();
                                                     String phone = admin_add_phonesv.getText().toString();
                                                     String address = admin_add_addresssv.getText().toString();
@@ -193,9 +191,9 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
                                         } else {
                                             Toast.makeText(getApplicationContext(), "Chưa nhập ngày sinh", Toast.LENGTH_LONG).show();
                                         }
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), " Email Lỗi",Toast.LENGTH_LONG).show();
-                                    }
+//                                    } else {
+//                                        Toast.makeText(getApplicationContext(), " Email Lỗi",Toast.LENGTH_LONG).show();
+//                                    }
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Vui lòng chọn giới tính", Toast.LENGTH_LONG).show();
                                 }
@@ -216,7 +214,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
             if (!admin_add_idsv.getEditableText().toString().isEmpty()){
                 if (!admin_add_namesv.getEditableText().toString().isEmpty()) {
                     if (admin_add_gtsv.getCheckedRadioButtonId() != -1) {
-                        if (!admin_add_emailsv.getEditableText().toString().isEmpty() && admin_add_emailsv.getEditableText().toString().trim().matches(emailPattern)){
+//                        if (!admin_add_emailsv.getEditableText().toString().isEmpty() && admin_add_emailsv.getEditableText().toString().trim().matches(emailPattern)){
                             if (!admin_add_dobsv.getEditableText().toString().isEmpty()){
                                 if (!admin_add_phonesv.getEditableText().toString().isEmpty()){
                                     if (!admin_add_addresssv.getEditableText().toString().isEmpty()){
@@ -226,7 +224,7 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
                                         String gt = admin_add_gtsv_btn.getText().toString();
                                         String mssv = admin_add_idsv.getText().toString();
                                         String name = admin_add_namesv.getText().toString();
-                                        String email = admin_add_emailsv.getText().toString();
+                                        String email ="mssv"+admin_add_idsv.getText().toString()+"@gmail.com";
                                         String dob = admin_add_dobsv.getText().toString();
                                         String phone = admin_add_phonesv.getText().toString();
                                         String address = admin_add_addresssv.getText().toString();
@@ -244,9 +242,9 @@ public class AdminQLSinhVienAddActivity extends AppCompatActivity {
                             } else {
                                 Toast.makeText(getApplicationContext(), "Chưa nhập ngày sinh", Toast.LENGTH_LONG).show();
                             }
-                        } else {
-                            Toast.makeText(getApplicationContext(), " Email Lỗi",Toast.LENGTH_LONG).show();
-                        }
+//                        } else {
+//                            Toast.makeText(getApplicationContext(), " Email Lỗi",Toast.LENGTH_LONG).show();
+//                        }
                     } else {
                         Toast.makeText(getApplicationContext(), "Vui lòng chọn giới tính", Toast.LENGTH_LONG).show();
                     }

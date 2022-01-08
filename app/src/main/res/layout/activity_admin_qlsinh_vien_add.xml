@@ -86,10 +86,13 @@
                 android:background="@drawable/blue_border_rounded_cornwe">
 
                 <!-- INPUT -->
+
+                <!-- ICON -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/admin_add_idsv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
                     android:layout_toEndOf="@+id/username_icon_0"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/poppins_regular"
@@ -104,7 +107,6 @@
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
-                <!-- ICON -->
                 <ImageView
                     android:id="@+id/username_icon_0"
                     android:layout_width="24dp"
@@ -190,45 +192,45 @@
                     tools:ignore="HardcodedText" />
             </RadioGroup>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="60dp"
-                android:background="@drawable/blue_border_rounded_cornwe">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="60dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="60dp"-->
+<!--                android:background="@drawable/blue_border_rounded_cornwe">-->
 
-                <!-- INPUT -->
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_add_emailsv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/username_icon_2"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="Email"
-                    android:inputType="none"
-                    android:maxLines="1"
-                    android:paddingStart="17dp"
-                    android:paddingTop="15dp"
-                    android:paddingEnd="0dp"
-                    android:paddingBottom="15dp"
-                    android:textColor="#000000"
-                    android:textCursorDrawable="@drawable/cursor_color"
-                    android:textSize="12sp"
-                    tools:ignore="HardcodedText" />
+<!--                &lt;!&ndash; INPUT &ndash;&gt;-->
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/admin_add_emailsv"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_toEndOf="@+id/username_icon_2"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:hint="Email"-->
+<!--                    android:inputType="none"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:paddingStart="17dp"-->
+<!--                    android:paddingTop="15dp"-->
+<!--                    android:paddingEnd="0dp"-->
+<!--                    android:paddingBottom="15dp"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textCursorDrawable="@drawable/cursor_color"-->
+<!--                    android:textSize="12sp"-->
+<!--                    tools:ignore="HardcodedText" />-->
 
-                <!-- ICON -->
-                <ImageView
-                    android:id="@+id/username_icon_2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginEnd="0dp"
-                    android:src="@drawable/email" />
+<!--                &lt;!&ndash; ICON &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/username_icon_2"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginStart="17dp"-->
+<!--                    android:layout_marginEnd="0dp"-->
+<!--                    android:src="@drawable/email" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
             <RelativeLayout
                 android:layout_width="wrap_content"
