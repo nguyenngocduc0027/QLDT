@@ -70,12 +70,19 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_lophoc = findViewById(R.id.btn_lophoc);
+        btn_lophoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AdminQLLopHocActivity.class));
+            }
+        });
+
         Button btn_hocphan = findViewById(R.id.btn_hocphan);
         btn_hocphan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent hp = new Intent(AdminHomeActivity.this, AdminQLHocPhanActivity.class);
-                startActivity(hp);
+                startActivity(new Intent(AdminHomeActivity.this, AdminQLHocPhanActivity.class));
             }
         });
 
@@ -83,8 +90,7 @@ public class AdminHomeActivity extends AppCompatActivity {
         btn_giangvien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gv = new Intent(AdminHomeActivity.this,AdminQLGiangVienActivity.class);
-                startActivity(gv);
+                startActivity(new Intent(AdminHomeActivity.this,AdminQLGiangVienActivity.class));
             }
         });
 
@@ -92,8 +98,7 @@ public class AdminHomeActivity extends AppCompatActivity {
         btn_sinhvien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminHomeActivity.this,AdminQLSinhVienActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(AdminHomeActivity.this,AdminQLSinhVienActivity.class));
             }
         });
 
@@ -101,8 +106,7 @@ public class AdminHomeActivity extends AppCompatActivity {
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminHomeActivity.this,AdminProfileActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(AdminHomeActivity.this,AdminProfileActivity.class));
             }
         });
 
