@@ -102,8 +102,8 @@ public class AdminHomeActivity extends AppCompatActivity {
             }
         });
 
-        Button btn_profile = findViewById(R.id.btn_profile);
-        btn_profile.setOnClickListener(new View.OnClickListener() {
+
+        show_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AdminHomeActivity.this,AdminProfileActivity.class));

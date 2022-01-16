@@ -72,6 +72,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="30dp"
+            android:layout_gravity="center"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -86,6 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
                     android:orientation="horizontal"
                     android:gravity="center_horizontal">
 
@@ -149,26 +151,26 @@
                     android:orientation="horizontal"
                     android:gravity="center_horizontal">
 
-                    <Button
-                        android:id="@+id/btn_diemthi"
-                        android:layout_height="150dp"
-                        android:layout_width="150dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:drawableBottom="@drawable/diem"
-                        android:text="Điểm Thi"
-                        android:background="@drawable/blue_fill__rounded_color"/>
+<!--                    <Button-->
+<!--                        android:id="@+id/btn_diemthi"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:drawableBottom="@drawable/diem"-->
+<!--                        android:text="Điểm Thi"-->
+<!--                        android:background="@drawable/blue_fill__rounded_color"/>-->
 
-                    <Button
-                        android:id="@+id/btn_profile"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/blue_fill__rounded_color"
-                        android:drawableBottom="@drawable/profile"
-                        android:text="Tài Khoản"
-                        android:theme="@style/Button.Orange" />
+<!--                    <Button-->
+<!--                        android:id="@+id/btn_profile"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:background="@drawable/blue_fill__rounded_color"-->
+<!--                        android:drawableBottom="@drawable/profile"-->
+<!--                        android:text="Tài Khoản"-->
+<!--                        android:theme="@style/Button.Orange" />-->
 
                 </LinearLayout>
 
