@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QLDT">
         <activity
-            android:name=".AdminQLLopHocDSSVActivity"
-            android:exported="false" />
-        <activity
             android:name=".AdminQLLopHocEditActivity"
             android:exported="false" />
         <activity

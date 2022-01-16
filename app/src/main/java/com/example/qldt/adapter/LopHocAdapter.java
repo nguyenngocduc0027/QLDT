@@ -2,7 +2,6 @@ package com.example.qldt.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -16,8 +15,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.qldt.AdminQLHocPhanEditActivity;
-import com.example.qldt.AdminQLLopHocDSSVActivity;
 import com.example.qldt.AdminQLLopHocEditActivity;
 import com.example.qldt.R;
 import com.example.qldt.model.LopHoc;
@@ -54,7 +51,7 @@ public class LopHocAdapter extends ArrayAdapter<LopHoc> {
         TextView thu = view.findViewById(R.id.item_list_lh_thu);
         TextView tgbatdau = view.findViewById(R.id.item_list_lh_tgbatdau);
         TextView tgketthuc = view.findViewById(R.id.item_list_lh_tgkethuc);
-        TextView dslop = view.findViewById(R.id.item_list_lh_dslop);
+//        TextView dslop = view.findViewById(R.id.item_list_lh_dslop);
 
         // lấy dữ liệu của đối tượng sinh viên đưa lên các textview thành phần
         LopHoc lopHoc = this.objects.get(position);
@@ -99,12 +96,12 @@ public class LopHocAdapter extends ArrayAdapter<LopHoc> {
             }
         });
 
-        dslop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.startActivity(new Intent(activity, AdminQLLopHocDSSVActivity.class));
-            }
-        });
+//        dslop.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                activity.startActivity(new Intent(activity, AdminQLLopHocDSSVActivity.class));
+//            }
+//        });
 
 
         return view;

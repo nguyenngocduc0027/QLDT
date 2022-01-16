@@ -41,33 +41,33 @@
             android:textColor="#ffffff"
             tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/btn_gv"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:background="@drawable/blue_fill__rounded_color"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="GIẢNG VIÊN"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+<!--        <TextView-->
+<!--            android:id="@+id/btn_gv"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/blue_fill__rounded_color"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="GIẢNG VIÊN"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText" />-->
 
-        <TextView
-            android:id="@+id/btn_sv"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/blue_fill__rounded_color"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="SINH VIÊN"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+<!--        <TextView-->
+<!--            android:id="@+id/btn_sv"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/blue_fill__rounded_color"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="SINH VIÊN"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textStyle="bold"-->
+<!--            tools:ignore="HardcodedText" />-->
     </LinearLayout>
 
 </LinearLayout>

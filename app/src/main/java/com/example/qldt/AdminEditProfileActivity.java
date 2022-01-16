@@ -148,7 +148,7 @@ public class AdminEditProfileActivity extends AppCompatActivity {
         edit_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                backfunc();
             }
         });
 
@@ -239,7 +239,6 @@ public class AdminEditProfileActivity extends AppCompatActivity {
 
     private void backfunc() {
         Intent intent = new Intent(getApplicationContext(),AdminProfileActivity.class);
-        Toast.makeText(getApplicationContext(),"Không Thành Công cũng Thành Thụ",Toast.LENGTH_LONG).show();
         startActivity(intent);
         finish();
     }

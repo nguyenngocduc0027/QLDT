@@ -25,17 +25,21 @@
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qllop_hoc.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qllop_hoc_add.xml" value="0.24615384615384617" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qllop_hoc_dssvactivity.xml" value="0.25" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qllop_hoc_dssvadd.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qllop_hoc_edit.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qlsinh_vien.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qlsinh_vien_add.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_admin_qlsinh_vien_edit.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_handle_screen.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/activity_splash_screen.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_dssv.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_gv.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_hp.xml" value="0.3625" />
-        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_lh.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_lh.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/layout/listview_sv.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/main_menu.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/popup_menu.xml" value="0.3625" />
+        <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/popup_menu_dssv.xml" value="0.25" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/popup_menu_gv.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/popup_menu_hp.xml" value="0.3625" />
         <entry key="..\:/LTNC/QLDT/app/src/main/res/menu/popup_menu_lh.xml" value="0.3625" />
