@@ -22,7 +22,7 @@ Truy cập link : https://console.firebase.google.com/u/0/project/qldt-20170027/
 
 Sử dụng
 - Email : tinhph22@gmail.com
-- Password : 
+- Password : laptrinhnangcao
 
 ### Demo ứng dụng
 
